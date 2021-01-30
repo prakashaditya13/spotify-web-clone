@@ -1,11 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Spotify | Online Music Platform</title>
-</head>
-<body>
-    Hello
-</body>
-</html>
+<?php include('./includes/header.php'); ?>
+
+<h1 class="pageHeading">You Might Also Like</h1>
+
+<div class="gridViewContainer">
+    <?php 
+        $albumQuery = mysqli_query($conn, "SELECT * FROM album ORDER BY RAND() LIMIT 10");
+
+        while($row = mysqli_fetch_array($albumQuery)){
+            echo "<div class='gridViewItem'>
+            <img src='".$row['albumArtwork']."'>
+            <div class='gridViewInfo'>"
+                .$row['title'].
+            "</div>
+            </div>";
+        }
+    ?>
+</div>
+
+<?php include('./includes/footer.php'); ?>

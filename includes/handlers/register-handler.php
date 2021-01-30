@@ -1,5 +1,4 @@
 <?php 
-
 function formatPassword($inputText){
     $inputText = strip_tags($inputText);
     return $inputText;
@@ -25,6 +24,12 @@ if(isset($_POST['registerButton'])){
     $confirmEmail = formatFormString($_POST['confirmEmail']);
     $password = formatPassword($_POST['Password']);
     $confirmPassword = formatPassword($_POST['confirmPassword']);
+
+    $isSuccess = $account->register($username, $firstName, $lastName, $email, $confirmEmail, $password, $confirmPassword);
+     if($isSuccess == true){
+        $_SESSION['userLoggedIn'] = $username;
+         header("Location: index.php");
+     }
     
 }
 
