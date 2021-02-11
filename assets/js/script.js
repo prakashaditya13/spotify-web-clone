@@ -1,8 +1,23 @@
 var currentPlaylist = [];
+var shufflePlaylist = [];
+var tempPlaylist = [];
 var audioElement;
 var mouseDown = false;
 var currentIndex;
 var repeat = false
+var shuffle = false
+var userLoggedIn
+
+
+function openPage(url){
+    if(url.indexOf("?")=== -1){
+        url = url + "?"
+    }
+    var encodedUrl = encodeURI(url+"?userLoggedIn="+userLoggedIn)
+    $("#mainContent").load(encodedUrl)
+    $("body").scrollTop(0)
+    history.pushState(null, null, url)
+}
 
 function formatTime(seconds){
     var time = Math.round(seconds)
@@ -24,10 +39,18 @@ function updateVolumeBar(audio){
     $(".volumeBar .progress").css("width", volume + "%")
 }
 
+function playFirstSong(){
+    setTrack(tempPlaylist[0], tempPlaylist, true)
+}
+
 class Audio {
     constructor() {
         this.CurrentPlaying;
         this.audio = document.createElement('audio');
+
+        this.audio.addEventListener("ended", function(){
+            nextSong()
+        })
         this.audio.addEventListener("canplay", function(){
             $(".progressTime.remainingTime").text(formatTime(this.duration))
         })
