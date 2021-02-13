@@ -418,6 +418,19 @@ body{
     font-size: 14px;
 }
 
+.button{
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2.0px;
+    border: 2px solid #fff;
+    border-radius: 500px;
+    padding: 10px;
+    min-width: 140px;
+    font-size: 14px;
+}
 .button.green{
     background-color: #07d159;
     border-color: #07d159;
@@ -427,10 +440,56 @@ body{
     border-bottom: 2px solid #fff;
 }
 
-.trackListContainer h2,.gridViewContainer h2{
+.trackListContainer h2,.gridViewContainer h2,.artistContainer h2{
     text-align: center;
 }
 
 [role="link"]{
     cursor: pointer;
+}
+
+.searchContainer{
+    background-color: #242424;
+    padding: 20px 28px;
+}
+
+.searchContainer h4{
+    margin: 0;
+    font-weight: 300;
+}
+
+.searchInput{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 62px;
+    letter-spacing: 2px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.searchResultRow{
+    padding: 15px 10px;
+}
+
+.searchResultRow:hover{
+    background-color: #282828;
+}
+
+.noResults{
+    margin: 15px;
+    display: block;
+}
+
+.buttonItems button{
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.playlistContainer{
+    padding: 10px 0;
 }

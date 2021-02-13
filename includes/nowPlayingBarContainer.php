@@ -157,17 +157,17 @@ $jsonArray = json_encode($resultArray);
                 artistId: track.artist
             }, function(data) {
                 var artist = JSON.parse(data)
-                $(".artistName span").text(artist.name)
-                $(".artistName span").attr("onclick", "openPage('artist.php?id="+artist.id+"')")
+                $(".trackInfo .artistName span").text(artist.name)
+                $(".trackInfo .artistName span").attr("onclick", "openPage('artist.php?id="+artist.id+"')")
             })
 
             $.post("includes/handlers/ajax/getAlbumJson.php", {
                 albumId: track.album
             }, function(data) {
                 var album = JSON.parse(data)
-                $(".albumLink img").attr("src", album.albumArtwork)
-                $(".albumLink img").attr("onclick", "openPage('album.php?id="+album.id+"')")
-                $(".trackName span marquee").attr("onclick", "openPage('album.php?id="+album.id+"')")
+                $(".content .albumLink img").attr("src", album.albumArtwork)
+                $(".content .albumLink img").attr("onclick", "openPage('album.php?id="+album.id+"')")
+                $(".trackInfo .trackName span marquee").attr("onclick", "openPage('album.php?id="+album.id+"')")
             })
             audioElement.setTrack(track)
             if (play) {

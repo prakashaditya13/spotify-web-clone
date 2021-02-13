@@ -7,16 +7,35 @@ var currentIndex;
 var repeat = false
 var shuffle = false
 var userLoggedIn
-
+var timer;
 
 function openPage(url){
+    if(timer!=null){
+        clearTimeout(timer)
+    }
+
     if(url.indexOf("?")=== -1){
         url = url + "?"
     }
-    var encodedUrl = encodeURI(url+"?userLoggedIn="+userLoggedIn)
+    var encodedUrl = encodeURI(url+"&userLoggedIn="+userLoggedIn)
     $("#mainContent").load(encodedUrl)
     $("body").scrollTop(0)
     history.pushState(null, null, url)
+}
+
+function createPlaylist(){
+    console.log(userLoggedIn)
+    var popup = prompt("Please enter the name of your playlist")
+
+    if(popup!=null){
+        $.post("includes/handlers/ajax/createPlaylist.php", {name: popup, username: userLoggedIn}).done(function(error){
+            if(error!=""){
+                alert(error)
+                return
+            }
+            openPage('yourMusic.php')
+        })
+    }
 }
 
 function formatTime(seconds){
