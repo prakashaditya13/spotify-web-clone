@@ -21,8 +21,17 @@ $(window).scroll(function(){
 })
 
 $(document).on("change", "select.playlist", function(){
-    var playlistId = $(this).val()
-    var songId = $(this).prev(".songId").val()
+    var select  = $(this)
+    var playlistId = select.val()
+    var songId = select.prev(".songId").val()
+    $.post("includes/handlers/ajax/addToPlaylist.php", {playlistId: playlistId, songId: songId}).done(function(error){
+        if(error!=""){
+            alert(error)
+            return
+        }
+        hideOptionMenu()
+        select.val("")
+    })
 })
 
 function openPage(url){
@@ -37,6 +46,12 @@ function openPage(url){
     $("#mainContent").load(encodedUrl)
     $("body").scrollTop(0)
     history.pushState(null, null, url)
+}
+
+function logout(){
+    $.post("includes/handlers/ajax/logout.php", function(){
+        location.reload()
+    })
 }
 
 function createPlaylist(){
@@ -67,6 +82,18 @@ function deletePlaylist(playlistId){
     }
 }
 
+function removeFromPlaylist(button, playlistId){
+    var songId = $(button).prevAll(".songId").val()
+
+    $.post("includes/handlers/ajax/removeFromPlaylist.php", {playlistId: playlistId, songId: songId}).done(function(error){
+        if(error!=""){
+            alert(error)
+            return
+        }
+        openPage('playlist.php?id='+playlistId)
+    })
+}
+
 function hideOptionMenu(){
     var menu = $(".optionMenu")
     if(menu.css("display") != "none"){
@@ -75,8 +102,10 @@ function hideOptionMenu(){
 }
 
 function showOptionMenu(button){
+    var songId = $(button).prevAll(".songId").val()
     var menu = $(".optionMenu")
     var menuWidth = menu.width()
+    menu.find(".songId").val(songId)
     var scrollTop = $(window).scrollTop()
     var elementOffset = $(button).offset().top
     var top = elementOffset - scrollTop
