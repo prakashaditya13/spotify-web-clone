@@ -25,10 +25,11 @@
 **DEMO SECTION**
 
 <img src="demo/1.png">
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/2.png")
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/3.png")
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/4.png")
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/5.png")
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/6.png")
-![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/7.png")
+<img src="demo/2.png">
+<img src="demo/3.png">
+<img src="demo/4.png">
+<img src="demo/5.png">
+<img src="demo/6.png">
+<img src="demo/7.png">
+
 
