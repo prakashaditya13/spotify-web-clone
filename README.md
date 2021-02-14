@@ -24,7 +24,7 @@
 
 **DEMO SECTION**
 
-[demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/1.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/1.png")
 ![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/2.png")
 ![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/3.png")
 ![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/4.png")
