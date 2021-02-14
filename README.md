@@ -3,14 +3,23 @@
 ### Features
 
 -> Albums Section
+
 -> Artists Section
+
 -> Search a Song, albums and artists.
+
 -> Create your own playlists
+
 -> Manage playlists - Delete songs, playlist and Add new Songs
+
 -> Users Info Section
+
 -> Volume and Mute Controls
+
 -> Repeat song features
+
 -> Shuffle Songs
+
 -> Dynamic Player etc.
 
 **DEMO SECTION**
