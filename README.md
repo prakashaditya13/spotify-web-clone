@@ -1,5 +1,7 @@
 ## Spotify Web Clone
 
+Music Streaming Application.
+
 ### Features
 
 -> Albums Section
