@@ -24,11 +24,11 @@
 
 **DEMO SECTION**
 
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/1.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/2.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/3.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/4.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/5.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/6.png")
-![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/7.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/1.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/2.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/3.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/4.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/5.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/6.png")
+![demo]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/7.png")
 
