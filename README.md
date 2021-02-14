@@ -13,7 +13,7 @@
 -> Shuffle Songs
 -> Dynamic Player etc.
 
-** DEMO SECTION **
+**DEMO SECTION**
 
 ![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/1.png")
 ![]("https://raw.githubusercontent.com/prakashaditya13/spotify-web-clone/master/demo/2.png")
